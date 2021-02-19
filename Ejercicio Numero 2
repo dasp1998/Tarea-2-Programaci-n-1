@@ -1,0 +1,52 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Descuento_en_MetroPlaza
+{
+    class Cliente
+    {
+        private float descuento;
+        private float precio;
+        public void Inicio()
+        {
+            Console.WriteLine("Ingrese el Precio de Producto: ");
+            precio = float.Parse(Console.ReadLine());
+            Console.Clear();
+
+        }
+        public void Descuento()
+        {
+            if (precio > 300)
+            {
+                float res = (precio * 20) / 300;
+                descuento = precio - res;
+                Console.WriteLine("Super Mercado S_P!!!");
+                Console.WriteLine("Se realizara un descuento del 20% si tu compra supera los Q.300.00");
+                Console.WriteLine("Tu Precio es: " + descuento);
+                Console.ReadLine();
+            }
+            else
+            {
+                Console.WriteLine("Super Mercado S_P!!!");
+
+                Console.WriteLine("El Precio Es: " + precio);
+                Console.ReadLine();
+
+            }
+            Console.ReadKey();
+
+        }
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Super Mercado S_P!!!");
+            Cliente clie = new Cliente();
+            clie.Inicio();
+            clie.Descuento();
+
+        }
+
+    }
+}

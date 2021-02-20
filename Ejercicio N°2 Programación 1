@@ -1,10 +1,7 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Descuento_en_MetroPlaza
+
+namespace Descuento_en_MetroPlaza_Jutiapa
 {
     class Cliente
     {
@@ -12,7 +9,7 @@ namespace Descuento_en_MetroPlaza
         private float precio;
         public void Inicio()
         {
-            Console.WriteLine("Ingrese el Precio de Producto: ");
+            Console.WriteLine("Precio del Producto: ");
             precio = float.Parse(Console.ReadLine());
             Console.Clear();
 
@@ -23,14 +20,14 @@ namespace Descuento_en_MetroPlaza
             {
                 float res = (precio * 20) / 300;
                 descuento = precio - res;
-                Console.WriteLine("Super Mercado S_P!!!");
+                Console.WriteLine("Super Barata de la Metro");
                 Console.WriteLine("Se realizara un descuento del 20% si tu compra supera los Q.300.00");
                 Console.WriteLine("Tu Precio es: " + descuento);
                 Console.ReadLine();
             }
             else
             {
-                Console.WriteLine("Super Mercado S_P!!!");
+                Console.WriteLine("SSuper Barata de la Metro");
 
                 Console.WriteLine("El Precio Es: " + precio);
                 Console.ReadLine();
@@ -41,7 +38,7 @@ namespace Descuento_en_MetroPlaza
         }
         static void Main(string[] args)
         {
-            Console.WriteLine("Super Mercado S_P!!!");
+            Console.WriteLine("SSuper Barata de la Metro");
             Cliente clie = new Cliente();
             clie.Inicio();
             clie.Descuento();

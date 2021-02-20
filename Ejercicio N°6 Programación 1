@@ -1,1 +1,45 @@
-
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+namespace Es_un_numero_Primo_o_no
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int n, x, sw, resi;
+            string linea;
+            x = 2;
+            sw = 0;
+            Console.WriteLine("Es Numero Primo");
+            Console.WriteLine();
+            Console.Write("Puedes Ingresar Un Numero:");
+            linea = Console.ReadLine();
+            n = int.Parse(linea);
+            while (x < n && sw == 0)
+            {
+                resi = n % x;
+                if (resi == 0)
+                {
+                    sw = 1;
+                }
+                else
+                {
+                    x = x + 1;
+                }
+            }
+            if (sw == 0)
+            {
+                Console.WriteLine();
+                Console.WriteLine("Excato es Numero Primo");
+            }
+            else
+            {
+                Console.WriteLine();
+                Console.WriteLine("Este Numero No Es Primo");
+            }
+            Console.ReadKey();
+        }
+    }
+}
